@@ -1,24 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './ui/mycv/profile/profile.component';
-import { LayoutComponent } from './ui/layout/layout.component';
-import { ExperienceComponent } from './ui/mycv/experience/experience.component';
-import { ToolsComponent } from './ui/mycv/tools/tools.component';
-import { MycvComponent } from './ui/mycv/mycv.component';
+import { LayoutModule } from './ui/layout/layout.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProfileComponent,
-    LayoutComponent,
-    ExperienceComponent,
-    ToolsComponent,
-    MycvComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    LayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
