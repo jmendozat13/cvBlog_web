@@ -18,6 +18,6 @@ import { ProfileService } from 'src/app/services/service/profile.service';
     CommonModule
   ],
   exports: [MycvComponent],
-  providers: [{ provide: ProfileRepository, useValue: ProfileService }],
+  providers: [{ provide: ProfileRepository, useClass: ProfileService }],
 })
 export class MycvModule { }
