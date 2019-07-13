@@ -6,6 +6,8 @@ import { ToolsComponent } from './tools/tools.component';
 import { MycvComponent } from './mycv.component';
 import { ProfileRepository } from 'src/app/usecases/repository/profile-repository';
 import { ProfileService } from 'src/app/services/service/profile.service';
+import { ExperienceRepository } from 'src/app/usecases/repository/experience-repository';
+import { ExperienceService } from 'src/app/services/service/experience.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { ProfileService } from 'src/app/services/service/profile.service';
     CommonModule
   ],
   exports: [MycvComponent],
-  providers: [{ provide: ProfileRepository, useClass: ProfileService }],
+  providers: [{ provide: ProfileRepository, useClass: ProfileService },
+  { provide: ExperienceRepository, useClass: ExperienceService }]
 })
 export class MycvModule { }

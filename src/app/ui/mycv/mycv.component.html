@@ -12,7 +12,9 @@
                 </div>
             </section>
             <div class="row">
-                <app-experience class="col-lg-9"></app-experience>
+                <app-experience *ngIf="experienceArray"
+                    [dataExperience]="experienceArray"
+                    class="col-lg-9"></app-experience>
                 <app-tools class="col-lg-3"></app-tools>
             </div>
         </div>
