@@ -22,7 +22,8 @@ export class ProfileService implements ProfileRepository {
       const url = `${environment.urlApi}profile/${userid}`;
       return this.http.get(url, { headers: lstHeaders }).pipe(
         map((response: any) => {
-          return new Profile(response.fullName,
+          return new Profile(response._id,
+            response.fullName,
             response.urlImage,
             response.specialty,
             response.email,

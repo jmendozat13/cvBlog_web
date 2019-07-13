@@ -1,19 +1,14 @@
 <article class="resume-wrapper text-center position-relative">
-    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
-        <app-profile></app-profile>
+    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg"
+        *ngIf="profile">
+        <app-profile [dataProfile]="profile"></app-profile>
         <div class="resume-body p-5">
             <section class="resume-section summary-section mb-5">
                 <h2 class="resume-section-title text-uppercase font-weight-bold
                     pb-3
                     mb-3">objetivos</h2>
                 <div class="resume-section-content">
-                    <p class="mb-0">Aprender y compartir conocimientos,
-                        desarrollar nuevas
-                        amistades y experiencia, ofrecer a tu compañía, empresa
-                        o negocio
-                        habilidades para implementar aplicaciones web, móviles,
-                        desktop de
-                        calidad. </p>
+                    <p class="mb-0">{{profile.objectives}}</p>
                 </div>
             </section>
             <div class="row">
