@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ExperienceRepository } from 'src/app/usecases/repository/experience-repository';
 import { Observable } from 'rxjs';
-import { Experience, ExperienceSection } from 'src/app/entities/experience';
+import { Experience, ExperienceSection, Company } from 'src/app/entities/experience';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
@@ -26,7 +26,7 @@ export class ExperienceService implements ExperienceRepository {
             const newExperience = new Experience(
               experience.startDate,
               experience.position,
-              experience.company,
+              new Company(experience.company, ''),
               experience.endDate,
               experience.present,
               experience.description);

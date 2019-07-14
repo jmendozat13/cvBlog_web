@@ -3,13 +3,13 @@ export class Experience {
     startDate: Date;
     profileId: string;
     position: string;
-    company: string;
+    company: Company;
     endDate: Date;
     present: boolean;
     description: string;
     order: number;
     experienceSection: ExperienceSection[];
-    constructor(startDate: Date, position: string, company: string, endDate: Date, present: boolean, description: string) {
+    constructor(startDate: Date, position: string, company: Company, endDate: Date, present: boolean, description: string) {
         this.startDate = startDate;
         this.position = position;
         this.company = company;
@@ -65,5 +65,16 @@ export class Item {
     name: string;
     constructor(name: string) {
         this.name = name;
+    }
+}
+
+export class Company {
+    id: string;
+    name: string;
+    description: string;
+    website: string;
+    constructor(name: string, website: string) {
+        this.name = name;
+        this.website = website;
     }
 }

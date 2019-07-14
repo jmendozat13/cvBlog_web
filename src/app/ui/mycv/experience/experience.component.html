@@ -10,8 +10,8 @@
                         <h3 class="resume-position-title font-weight-bold
                             mb-1">{{experience.position}}</h3>
                         <div class="resume-company-name ml-auto"><a
-                                href="https://www.linkedin.com/company/everis-peru/"
-                                target="_blank">{{experience.company}}</a></div>
+                                [href]="experience.company.website"
+                                target="_blank">{{experience.company.name}}</a></div>
                     </div>
                     <div class="resume-position-time">
                         {{experience.startDate | date: 'yyyy'}} - <span
