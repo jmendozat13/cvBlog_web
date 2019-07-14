@@ -13,7 +13,12 @@
                                 href="https://www.linkedin.com/company/everis-peru/"
                                 target="_blank">{{experience.company}}</a></div>
                     </div>
-                    <div class="resume-position-time">2018 - Actualidad</div>
+                    <div class="resume-position-time">
+                        {{experience.startDate | date: 'yyyy'}} - <span
+                            *ngIf="experience.present; else endDate">Actualidad</span>
+                        <ng-template #endDate>
+                            {{experience.endDate | date:'yyyy'}}</ng-template>
+                    </div>
                 </div>
                 <div class="resume-timeline-item-desc">
                     <p>{{experience.description}}</p>

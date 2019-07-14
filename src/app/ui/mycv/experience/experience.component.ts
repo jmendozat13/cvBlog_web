@@ -13,7 +13,6 @@ export class ExperienceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.experiecenArray);
   }
 
 }
