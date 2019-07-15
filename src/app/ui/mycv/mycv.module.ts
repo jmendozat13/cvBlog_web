@@ -8,7 +8,7 @@ import { ProfileRepository } from 'src/app/usecases/repository/profile-repositor
 import { ProfileService } from 'src/app/services/service/profile.service';
 import { ExperienceRepository } from 'src/app/usecases/repository/experience-repository';
 import { ExperienceService } from 'src/app/services/service/experience.service';
-
+import { TooltipModule } from 'ng2-tooltip-directive';
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -17,7 +17,8 @@ import { ExperienceService } from 'src/app/services/service/experience.service';
     MycvComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TooltipModule
   ],
   exports: [MycvComponent],
   providers: [{ provide: ProfileRepository, useClass: ProfileService },

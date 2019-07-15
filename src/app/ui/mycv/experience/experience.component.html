@@ -11,7 +11,8 @@
                             mb-1">{{experience.position}}</h3>
                         <div class="resume-company-name ml-auto"><a
                                 [href]="experience.company.website"
-                                target="_blank">{{experience.company.name}}</a></div>
+                                target="_blank"><span
+                                    tooltip="{{experience.company.description}}">{{experience.company.name}}</span></a></div>
                     </div>
                     <div class="resume-position-time">
                         {{experience.startDate | date: 'yyyy'}} - <span
