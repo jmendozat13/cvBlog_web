@@ -25,6 +25,7 @@ export class MycvPresenter {
                 },
                 (error: Error) => {
                     this.mycvView.showError(error.message);
+                    this.mycvView.hideLoading();
                 },
                 () => {
                     this.mycvView.hideLoading();
@@ -34,7 +35,6 @@ export class MycvPresenter {
 
     getExperience(profileId: string) {
         if (this.mycvView == null) { return; }
-        this.mycvView.showLoading();
         this.experienceUseCase.getExperience(profileId)
             .subscribe(
                 (response: Experience[]) => {

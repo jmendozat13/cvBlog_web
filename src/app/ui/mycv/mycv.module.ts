@@ -9,12 +9,14 @@ import { ProfileService } from 'src/app/services/service/profile.service';
 import { ExperienceRepository } from 'src/app/usecases/repository/experience-repository';
 import { ExperienceService } from 'src/app/services/service/experience.service';
 import { TooltipModule } from 'ng2-tooltip-directive';
+import { SpinnerComponent } from './spinner/spinner.component';
 @NgModule({
   declarations: [
     ProfileComponent,
     ExperienceComponent,
     ToolsComponent,
-    MycvComponent
+    MycvComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,

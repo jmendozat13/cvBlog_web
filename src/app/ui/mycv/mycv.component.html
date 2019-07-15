@@ -1,4 +1,6 @@
-<article class="resume-wrapper text-center position-relative">
+<app-spinner *ngIf="isloading"></app-spinner>
+<article class="resume-wrapper text-center position-relative"
+    *ngIf="!isloading">
     <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg"
         *ngIf="profile">
         <app-profile [dataProfile]="profile"></app-profile>

@@ -11,6 +11,7 @@ export class MycvComponent implements OnInit, MycvView {
 
   public profile: Profile;
   public experienceArray: Experience[];
+  private isloading = true;
 
   constructor(private mycvPresenter: MycvPresenter) {
     this.mycvPresenter.setMycvView(this);
@@ -27,10 +28,10 @@ export class MycvComponent implements OnInit, MycvView {
     this.mycvPresenter.getExperience(this.profile.id);
   }
   showLoading() {
-    console.log('Cargando...');
+    this.isloading = true;
   }
   hideLoading() {
-    console.log('Carga completa...');
+    this.isloading = false;
   }
   showError(error: string) {
     console.log(`Error: ${error}`);
