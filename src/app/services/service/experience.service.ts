@@ -26,7 +26,9 @@ export class ExperienceService implements ExperienceRepository {
             const newExperience = new Experience(
               experience.startDate,
               experience.position,
-              new Company(experience.company, ''),
+              new Company(experience.company.name,
+                experience.company.description,
+                experience.company.website),
               experience.endDate,
               experience.present,
               experience.description);
