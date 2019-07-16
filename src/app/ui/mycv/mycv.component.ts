@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { MycvPresenter, MycvView } from './mycv.presenter';
 import { Profile } from 'src/app/entities/profile';
 import { Experience } from 'src/app/entities/experience';
+import { Skill } from 'src/app/entities/skill';
 
 @Component({
   selector: 'app-mycv',
   templateUrl: './mycv.component.html'
 })
 export class MycvComponent implements OnInit, MycvView {
-
   public profile: Profile;
   public experienceArray: Experience[];
-  private isloading = true;
+  public skills: Skill[];
+  public isloading = true;
 
   constructor(private mycvPresenter: MycvPresenter) {
     this.mycvPresenter.setMycvView(this);
@@ -26,6 +27,10 @@ export class MycvComponent implements OnInit, MycvView {
   showProfile(profile: Profile) {
     this.profile = profile;
     this.mycvPresenter.getExperience(this.profile.id);
+    this.mycvPresenter.getSkillsByProfile(this.profile.id);
+  }
+  showSkills(skills: Skill[]) {
+    this.skills = skills;
   }
   showLoading() {
     this.isloading = true;

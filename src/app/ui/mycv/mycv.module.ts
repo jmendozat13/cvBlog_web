@@ -10,13 +10,23 @@ import { ExperienceRepository } from 'src/app/usecases/repository/experience-rep
 import { ExperienceService } from 'src/app/services/service/experience.service';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { SkillRepository } from 'src/app/usecases/repository/skill-repository';
+import { SkillService } from 'src/app/services/service/skill.service';
+import { EducationComponent } from './education/education.component';
+import { LanguageComponent } from './language/language.component';
+import { InterestsComponent } from './interests/interests.component';
+import { SkillComponent } from './skill/skill.component';
 @NgModule({
   declarations: [
     ProfileComponent,
     ExperienceComponent,
     ToolsComponent,
     MycvComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    EducationComponent,
+    LanguageComponent,
+    InterestsComponent,
+    SkillComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +34,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
   ],
   exports: [MycvComponent],
   providers: [{ provide: ProfileRepository, useClass: ProfileService },
-  { provide: ExperienceRepository, useClass: ExperienceService }]
+  { provide: ExperienceRepository, useClass: ExperienceService },
+  { provide: SkillRepository, useClass: SkillService }]
 })
 export class MycvModule { }

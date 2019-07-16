@@ -17,7 +17,8 @@
                 <app-experience *ngIf="experienceArray"
                     [dataExperience]="experienceArray"
                     class="col-lg-9"></app-experience>
-                <app-tools class="col-lg-3"></app-tools>
+                <app-tools class="col-lg-3" *ngIf="skills"
+                    [dataSkills]="skills"></app-tools>
             </div>
         </div>
     </div>
