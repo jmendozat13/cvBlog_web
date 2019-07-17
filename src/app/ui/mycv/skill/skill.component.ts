@@ -9,10 +9,13 @@ import { Skill } from 'src/app/entities/skill';
 export class SkillComponent implements OnInit {
   // tslint:disable-next-line:no-input-rename
   @Input('dataSkills') public skills: Skill[];
+  skillTag: Skill[];
+  skillProgress: Skill[];
+
   constructor() { }
 
   ngOnInit() {
-    console.log(this.skills);
+    this.skillTag = this.skills.filter(s => s.type === 'tag');
+    this.skillProgress = this.skills.filter(s => s.type === 'progress');
   }
-
 }

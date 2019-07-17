@@ -13,14 +13,6 @@ export class Skill {
     addRangeTools(tools: Tool[]) {
         this.tools = tools;
     }
-
-    isTag(): boolean {
-        return this.type === 'Tag';
-    }
-    isProgress(): boolean {
-        return this.type === 'progress';
-    }
-
 }
 
 export class Tool {
