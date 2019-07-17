@@ -1,0 +1,16 @@
+.service-icons {
+    text-align: justify;
+    font-size: 0.1px;
+    list-style-type: none;
+    padding-left: 0pt;
+  }
+
+  .service-icons li{
+    display: inline-block;
+  }
+
+  .service-icons:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }

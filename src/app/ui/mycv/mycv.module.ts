@@ -16,6 +16,7 @@ import { EducationComponent } from './education/education.component';
 import { LanguageComponent } from './language/language.component';
 import { InterestsComponent } from './interests/interests.component';
 import { SkillComponent } from './skill/skill.component';
+import { AboutsiteComponent } from './aboutsite/aboutsite.component';
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -26,7 +27,8 @@ import { SkillComponent } from './skill/skill.component';
     EducationComponent,
     LanguageComponent,
     InterestsComponent,
-    SkillComponent
+    SkillComponent,
+    AboutsiteComponent
   ],
   imports: [
     CommonModule,
